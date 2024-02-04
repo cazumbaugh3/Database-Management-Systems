@@ -17,6 +17,7 @@ FROM table;
 Consider the following table.
 
 **purchase:**
+
 | product | unit_price | quantity |
 | ------- | ----- | -------- |
 | Bagel | 3 | 20 |
@@ -30,6 +31,7 @@ Let's say we want to get the average quantity of all purchases.
 SELECT AVG(quantity)
 FROM purchase;
 ```
+
 | avg |
 | --- |
 | 22.00 |
@@ -39,6 +41,7 @@ Similarly, we can retrieve the average total price as follows.
 SELECT AVG(unit_price * quantity)
 FROM purchase;
 ```
+
 | avg |
 | --- |
 | 35 |
@@ -49,6 +52,7 @@ SELECT product, AVG(unit_price * quantity)
 FROM purchase
 GROUP BY product;
 ```
+
 | product | avg |
 | ------- | --- |
 | Bagel | 45 |
